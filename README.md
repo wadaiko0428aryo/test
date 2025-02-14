@@ -7,14 +7,14 @@
 ### Docker ビルド
 
 
-1. [pyxel] git clone git@github.com:GithubEmipon/mogitate.git
+1. git clone git@github.com:GithubEmipon/mogitate.git
 
 2. DockerDesktop アプリを立ち上げる
 
 3. docker-compose up -d --build
 
 4. アプリケーションキーの作成
-php artisan key:generate
+   " php artisan key:generate "
 
 5. マイグレーションの実行
 php artisan migrate
