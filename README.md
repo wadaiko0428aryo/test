@@ -7,7 +7,7 @@
 ### Docker ビルド
 
 
-1. ![]git clone git@github.com:GithubEmipon/mogitate.git
+1. [pyxel] git clone git@github.com:GithubEmipon/mogitate.git
 
 2. DockerDesktop アプリを立ち上げる
 
