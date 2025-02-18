@@ -37,9 +37,9 @@ php artisan storage :link
 
 
 ## ER図
-ER図
+   https://github.com/wadaiko0428aryo/test/blob/main/src/.drawio.png
 ## URL
 
-- 開発環境：http://localhost/products
+- 開発環境：http://localhost/weight_logs
 
 - phpMyAdmin:：http://localhost:8080/
