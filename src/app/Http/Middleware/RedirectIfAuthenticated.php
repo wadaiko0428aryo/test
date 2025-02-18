@@ -28,5 +28,11 @@ class RedirectIfAuthenticated
         }
 
         return $next($request);
+
+        if (Auth::check()) {
+            return redirect()->route('weight.index');
+    }
+
+        return $next($request);
     }
 }

@@ -1,0 +1,61 @@
+.input-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.input:focus {
+    border-color: #A3A6E1;
+    outline: none;
+}
+
+/* ボタンのスタイル */
+.form-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submit {
+    background-color: #A3A6E1;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #FFABD9;
+}
+
+/* リンクのスタイル */
+.link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #A3A6E1;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}

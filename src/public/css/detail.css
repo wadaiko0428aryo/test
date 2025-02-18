@@ -1,0 +1,82 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 65%;
+    padding: 20px;
+}
+
+.detail-title {
+    text-align: left;
+    margin-bottom: 20px;
+    /* タイトルとフォームの間に余白を追加 */
+}
+
+.detail-form__group {
+    margin-bottom: 15px;
+    /* 各フォームの間に余白を追加 */
+}
+
+.detail-form__label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    /* ラベルと入力フィールドの間に余白を追加 */
+    text-align: left;
+}
+
+.detail-form__input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    /* パディングがボックス内に収まるように */
+}
+
+textarea {
+    resize: vertical;
+    /* 縦にのみリサイズ可能 */
+    height: 100px;
+    /* 高さ指定 */
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.detail-form__btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.detail-form__btn .back,
+.detail-form__btn .update {
+    padding: 10px 20px;
+    background-color: #A3A6E1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detail-form__btn .back {
+    background-color: #FFABD9;
+}
+
+.delete {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.delete img {
+    width: 24px;
+    height: 24px;
+}

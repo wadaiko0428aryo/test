@@ -1,0 +1,75 @@
+body {
+    background-color: #F9F9F9 !important;
+    margin: 0;
+    padding: 0;
+}
+
+.app{
+    width: 100%;
+    height: 100%;
+
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    /* 縦方向に並べる */
+    justify-content: flex-start;
+    /* 上から順に配置 */
+    align-items: center;
+    background-color: #F9F9F9;
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* header */
+.header{
+    background-color: white;
+    padding: 0 20px;
+
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1230px;
+    margin: 0 auto;
+    min-height: 72px;
+}
+
+.header-title{
+    margin: 0;
+    font-size: 40px;
+}
+
+.header-logo{
+    text-decoration: none;
+    font-family: Lora, serif;
+    color: #EC87EF;
+}
+
+.header-link {
+    display: flex;
+    gap: 20px;
+    /* 等間隔 */
+    align-items: center;
+}
+
+.header-goal {
+    background-color: #F9F9F9;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 8px 16px;
+}
+
+.logout {
+    background-color: #F9F9F9;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+}
