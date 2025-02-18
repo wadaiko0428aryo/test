@@ -22,8 +22,7 @@ php artisan migrate
 6. シーディングの実行
 php artisan db:seed
 
-7. シンボリックリンクの実行
-php artisan storage :link
+
 
 
 ## 使用技術(実行環境)
