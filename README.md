@@ -7,20 +7,32 @@
 ### Docker ビルド
 
 
-1. git clone git@github.com:GithubEmipon/mogitate.git
+1. プロジェクトを移動するディレクトリへ移動
 
-2. DockerDesktop アプリを立ち上げる
+2. git clone git@github.com:wadaiko0428aryo/test.git
 
-3. docker-compose up -d --build
+3. cd test
 
-4. アプリケーションキーの作成
-   " php artisan key:generate "
+4. code .  
 
-5. マイグレーションの実行
-php artisan migrate
+5. DockerDesktop アプリを立ち上げる
 
-6. シーディングの実行
-php artisan db:seed
+6. docker-compose up -d --build
+
+7. docer-compose exec php bash
+
+8. composer install
+
+9. cp .env.example .env
+
+10. アプリケーションキーの作成
+    php artisan key:generate
+
+11. マイグレーションの実行
+    php artisan migrate
+
+12. シーディングの実行
+    php artisan db:seed
 
 
 
