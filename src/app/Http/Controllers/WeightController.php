@@ -14,7 +14,7 @@ class WeightController extends Controller
     // トップページ表示
     public function index()
     {
-        $weight_logs = WeightLog::paginate(8);
+        $weight_logs = WeightLog::orderBy('date' , 'desc')->paginate(8);
         $weight_targets = auth()->check() ? WeightTarget::where('user_id', auth()->id())->first() : null;
 
         return view('index', compact('weight_logs', 'weight_targets'));
@@ -28,7 +28,7 @@ class WeightController extends Controller
         if ($request->filled('start_date') && $request->filled('end_date')) {
             $query->whereBetween('date', [$request->start_date, $request->end_date]);
         }
-        $weight_logs = $query->paginate(8);
+        $weight_logs = $query->orderBy('date','desc')->paginate(8);
         $weight_targets = auth()->check() ? WeightTarget::where('user_id', auth()->id())->first() : null;
         return view('index' , compact('weight_logs' , 'weight_targets'));
     }
@@ -76,6 +76,7 @@ class WeightController extends Controller
         return redirect('/weight_logs')->with(compact('weight_log'));
     }
 
+
     // モーダル&体重登録機能
     public function storeWeightLog(WeightLogRequest $request)
     {
@@ -92,19 +93,33 @@ class WeightController extends Controller
         return redirect('/weight_logs');
     }
 
-    // 目標体重設定ページ表示（未実装）
+    // 目標体重設定ページ表示
     public function goalSetting()
     {
-        // 目標体重設定データを取得（ログインユーザーの目標体重）
-        $weight_target = Auth::user()->weight_target;
+        $weight_target = Auth::user()->weight_target ?? new WeightTarget();
         return view('goal', compact('weight_target'));
     }
 
+
     // 目標体重設定の更新機能（未実施）
-    //     public function updateGoal()
-    // {
-    //     return redirect('/weight_logs');
-    // }
+    public function updateGoalWeight(Request $request)
+    {
+
+        $request->validate([
+            'target_weight' => 'required|numeric|min:1',
+        ]);
+        $user = Auth::user();
+        $weight_target = $user->weight_target ?? new WeightTarget();
+
+        $weight_target->user_id = $user->id;
+        $weight_target->target_weight = $request->target_weight;
+        $weight_target->save();
+
+        return redirect('/weight_logs');
+    }
+
+
+
 
 
     // 初期体重登録ページ表示

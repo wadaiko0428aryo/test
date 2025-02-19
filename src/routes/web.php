@@ -6,6 +6,8 @@ use App\Http\Controllers\Auth\RegisterStepController;
 
 
 Route::middleware(['auth'])->group(function () {
+    // 目標体重設定画面の表示
+    Route::get('/weight_logs/goal_setting', [WeightController::class, 'goalSetting']);
     // topページ表示
     Route::get('/weight_logs' , [WeightController::class , 'index'])->name('weight.index');
     // 検索機能
@@ -18,10 +20,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/weight_logs/{weightLogId}/delete' , [WeightController::class , 'delete']);
     // 追加、登録機能
     Route::post('/weight_logs/create', [WeightController::class, 'storeWeightLog']);
-    // 目標体重設定画面の表示
-    Route::get('/weight_logs/goal_setting', [WeightController::class, 'goalSetting']);
     // 目標体重設定の更新機能
-    Route::put('/register/goal_setting/update', [WeightController::class, 'updateGoalWeight']);
+    Route::put('/weight_logs/goal_setting/update', [WeightController::class, 'updateGoalWeight']);
 
 });
 

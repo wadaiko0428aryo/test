@@ -9,7 +9,7 @@
         <div class="hight-meter">
             <span class="weight-title">目標体重</span>
             @if(isset($weight_targets) && $weight_targets)
-                <span class="weight-numeric">{{ $weight_targets->target_weight }}</span>kg
+                <span class="weight-numeric">{{ Auth::user()->weight_target->target_weight ?? '未設定' }}</span>kg
             @else
                 <p>目標体重のデータが登録されていません</p>
             @endif
